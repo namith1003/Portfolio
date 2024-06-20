@@ -47,14 +47,15 @@ body {
 
 .circle {
     position: fixed;
-    top: 20px;
-    right: 20px;
+    top: 30px;
+    right: 30px;
     width: 40px;
     height: 40px;
     background-color: #007bff; /* Circle background color */
     border-radius: 50%; /* Make it circular */
     opacity: 1;
     scale: 0;
+    z-index: 10;
 }
 
 .wave {
