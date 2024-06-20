@@ -29,8 +29,32 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const waveElements = document.querySelectorAll(".wave");
+    const targetColor = "#ff7f50";
 
-// navbar.js
+    waveElements.forEach(element => {
+        let tl = gsap.timeline({ paused: true });
+
+        tl.to(element, {
+            duration: 0.3,
+            backgroundColor: targetColor,
+            ease: "power2.out"
+        });
+
+        element.addEventListener("mouseenter", function() {
+            tl.play();
+        });
+
+        element.addEventListener("mouseleave", function() {
+            tl.reverse();
+        });
+    });
+});
+
+
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 const circle = document.querySelector('.circle');

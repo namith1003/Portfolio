@@ -3,9 +3,9 @@ body {
     background-color: #111;
     color: #fff; 
     font-family: Arial, sans-serif;
+    overflow-x: hidden; /* Keep overflow hidden for body */
     margin: 0;
     padding: 0;
-    overflow: auto; /* Keep overflow hidden for body */
 }
 
 .custom-scrollbar {
@@ -34,15 +34,13 @@ body {
 
 #page1 {    
     height: 100vh;
-    width: 100vw;
-    overflow-y: auto; /* Enable vertical scrolling */
+    width: 100%;
     scrollbar-width: none; /* Hide default scrollbar in Firefox */
 }
 
 #page2 {    
     height: 100vh;
-    width: 100vw;
-    overflow-y: auto; /* Enable vertical scrolling */
+    width: 100%;
     scrollbar-width: none; /* Hide default scrollbar in Firefox */
     background-color: darkslategray;
 }
@@ -57,4 +55,12 @@ body {
     border-radius: 50%; /* Make it circular */
     opacity: 1;
     scale: 0;
+}
+
+.wave {
+    transition: background-color 0.1s ease;
+}
+
+.wave:hover {
+    background-color: red;
 }
