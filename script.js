@@ -28,3 +28,24 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+
+// navbar.js
+gsap.registerPlugin(ScrollTrigger);
+
+const circle = document.querySelector('.circle');
+
+gsap.to(circle, {
+    duration: 0.5,
+    delay: 0.5,
+    scale: 1.5,
+    ease: "in",
+    scrollTrigger: {
+        trigger: "#page2",
+        scroller: "body",
+        markers: true,
+        start: "top 85%",
+        end: "top 70%",
+        scrub: true,
+    }
+});
