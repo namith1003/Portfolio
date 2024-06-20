@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 duration: 0.3,
                 x: (dets.x - section.offsetLeft - (section.offsetWidth / 2)) * followStrengthx,
                 y: (dets.y - section.offsetTop - (section.offsetHeight / 2)) * followStrengthy,
-                ease: "back.out"
+                ease: "ease.out"
             });
         });
 
