@@ -1,9 +1,9 @@
 body {
-    background-color: #111; /* Dark background */
-    color: #fff; /* White text */
-    font-family: Arial, sans-serif; /* Font for text */
-    margin: 0;
-    padding: 0;
+    background-color: #111;
+    color: #fff; 
+    font-family: Arial, sans-serif;
+    height: 100%;
+    width: 100%;
 }
 
 
