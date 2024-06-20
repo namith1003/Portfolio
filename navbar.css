@@ -11,7 +11,12 @@
     justify-content: start;
 }
 
-#nav #sections {
-    justify-content: space-between;
+.hover-cursor a {
+    color: inherit; /* Inherit text color from parent */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    /* Add other styles as needed */
 }
+
+
 

@@ -3,26 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Custom Cursor Animation</title>
+    <title>Scrollable Pages</title>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="cursor.css">
     <link rel="stylesheet" href="navbar.css">
 </head>
 <body>
-    <div class="cursor">
-        <div class="cursor-dot"></div>
-        <div class="cursor-circle"></div>
+    <!-- Page 1 -->
+    <div id="page1">
+        <div class="cursor">
+            <div class="cursor-dot"></div>
+            <div class="cursor-circle"></div>
+        </div>
+
+        <div id="nav" class="hover-cursor">
+            <h2> Namith </h2>
+            <div id="sections">
+                <h4 id="section" class="sticky"><a href="#page2">Home</a></h4>
+                <h4 id="section" class="sticky"><a href="#page2">Work</a></h4>
+                <h4 id="section" class="sticky"><a href="#page2">Projects</a></h4>
+                <h4 id="section" class="sticky"><a href="#page2">About</a></h4>
+            </div>
+        </div>
     </div>
 
-    <div id = "nav">
-      <h2> Namith</h2>
-      <div id = "sections">
-        <h4 id = "section">Home</h4>
-        <h4 id = "section">Work</h4>
-        <h4 id = "section">Projects</h4>
-        <h4 id = "section">About</h4>
-      </div>
+    <!-- Page 2 -->
+    <div id="page2">
+        <div id="content-page2">
+            <h1>Page 2 Content</h1>
+            <p>This is where your content for Page 2 goes. It will be below Page 1 when you scroll down.</p>
+        </div>
     </div>
+
+    <div class="circle"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>

@@ -1,39 +1,30 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const cursorDot = document.querySelector('.cursor-dot');
-    const cursorCircle = document.querySelector('.cursor-circle');
+// Wrap code in a DOMContentLoaded event listener to ensure the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll(".sticky");
 
-    // Initial positions
-    let mouseX = window.innerWidth / 2;
-    let mouseY = window.innerHeight / 2;
-    let dotX = mouseX;
-    let dotY = mouseY;
-    let circleX = mouseX;
-    let circleY = mouseY;
+    const followStrengthx = 0.3; // Adjust follow strength (higher value = more movement)
+    const followStrengthy = 0.6; // Adjust follow strength (higher value = more movement)
 
-    const dotSpeed = 0.2; // Speed for the dot
-    const circleSpeed = 0.1; // Speed for the circle
-
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-
-    gsap.ticker.add(() => {
-        dotX += (mouseX - dotX) * dotSpeed;
-        dotY += (mouseY - dotY) * dotSpeed;
-        circleX += (mouseX - circleX) * circleSpeed;
-        circleY += (mouseY - circleY) * circleSpeed;
-
-        gsap.set(cursorDot, {
-            x: dotX,
-            y: dotY
+    // Add event listeners to each section
+    sections.forEach(section => {
+        section.addEventListener("mousemove", function(dets){
+            // GSAP animation to follow mouse within section bounds
+            gsap.to(section, {
+                duration: 0.3,
+                x: (dets.x - section.offsetLeft - (section.offsetWidth / 2)) * followStrengthx,
+                y: (dets.y - section.offsetTop - (section.offsetHeight / 2)) * followStrengthy,
+                ease: "power3.out"
+            });
         });
 
-        gsap.set(cursorCircle, {
-            x: circleX,
-            y: circleY
+        section.addEventListener("mouseleave", () => {
+            // Return section to original position on mouseleave
+            gsap.to(section, {
+                duration: 0.4,
+                x: 0,
+                y: 0,
+                ease: "bounce.out"
+            });
         });
     });
 });
-
-
