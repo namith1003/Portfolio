@@ -35,3 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    gsap.from('.name', { duration: 1, x: -50, opacity: 0, ease: 'power3.out' });
+    gsap.from('.nav-item', {
+        duration: 1,
+        x: 50,
+        opacity: 0,
+        ease: 'power3.out',
+        stagger: 0.2, // Staggered animation
+        delay: 0.5 // Delay after name animation
+    });
+});
+
