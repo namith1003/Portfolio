@@ -26,3 +26,51 @@
 
 
 
+
+
+/* Ensure the container is positioned correctly */
+.btn {
+    position: absolute;
+    display: inline;
+    overflow: hidden; 
+    justify-content: end;
+    margin-left: 22px;
+}
+
+.btn-click {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+.btn-text {
+    display: flex;
+    align-items: center;
+    transition: transform 0.5s ease-out;
+}
+
+.credit, .cbn {
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.cbn {
+    display: flex;
+    transform: translateX(0);
+}
+
+.credit span, .cbn span {
+    display: inline-block;
+}
+
+.nimlaka {
+    max-width: 0; /* Initially hidden */
+    transition: max-width 0.2s ease-out; /* Smooth transition */
+}
+
+.name-bar:hover .nimlaka {
+    max-width: 100px; /* Adjust as needed to show the full text */
+}
+
+

@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll(".hover-cursor h4");
 
     const followStrengthx = 0.3; // Adjust follow strength (higher value = more movement)
-    const followStrengthy = 0.6; // Adjust follow strength (higher value = more movement)
+    const followStrengthy = 0.5; // Adjust follow strength (higher value = more movement)
 
     // Add event listeners to each section
     sections.forEach(section => {
@@ -39,6 +39,22 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+    const btnClick = document.querySelector('.name-bar');
+    const cbd = document.querySelector('.cbn');
+
+    btnClick.addEventListener('mouseenter', () => {
+        gsap.to(cbd, { x: -128, duration: 1, ease: "power1.inOut" }); // Adjust to ensure it stops before the copyright symbol
+    });
+
+    btnClick.addEventListener('mouseleave', () => {
+        gsap.to(cbd, { x: 0, duration: 1, ease: "bounce.out" });
+    });
+});
+
+
+
 
 
 
