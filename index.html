@@ -6,6 +6,7 @@
     <title>Scrollable Pages</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="cursor.css">
 </head>
 <body>
   <div class="circle sticky wave"></div>
@@ -23,13 +24,13 @@
 
     <!-- Page 1 -->
     <div id="page1">
-        <div id="nav" class="hover-cursor">
+        <div id="nav">
             <h2> <div class="sticky">&copy; Created By Namith </div></h2>
-            <div id="sections">
-                <h4 id="section" class="sticky"><a href="#page2">Home</a></h4>
-                <h4 id="section" class="sticky"><a href="#page2">Work</a></h4>
-                <h4 id="section" class="sticky"><a href="#page2">Projects</a></h4>
-                <h4 id="section" class="sticky"><a href="#page2">About</a></h4>
+            <div id="sections" class="hover-cursor">
+                <h4 id="section" ><a href="#page2" class="sticky">Home</a></h4>
+                <h4 id="section"><a href="#page2" class="sticky">Work</a></h4>
+                <h4 id="section"><a href="#page2" class="sticky">Projects</a></h4>
+                <h4 id="section"><a href="#page2" class="sticky">About</a></h4>
             </div>
         </div>
     </div>
@@ -46,5 +47,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
     <script src="navbar.js"></script>
+    <script src="cursor.js"></script>
 </body>
 </html>

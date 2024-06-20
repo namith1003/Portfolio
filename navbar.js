@@ -9,27 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const cursor = document.querySelector('.cursor');
-    const hoverElements = document.querySelectorAll('.hover-cursor');
-
-    // Function to hide the cursor
-    const hideCursor = () => {
-        cursor.style.opacity = '0'; // Hide cursor
-    };
-
-    // Function to show the cursor
-    const showCursor = () => {
-        cursor.style.opacity = '1'; // Show cursor
-    };
-
-    // Event listeners for hover events on hoverElements
-    hoverElements.forEach(element => {
-        element.addEventListener('mouseenter', hideCursor);
-        element.addEventListener('mouseleave', showCursor);
-    });
-});
-
 // Wrap code in a DOMContentLoaded event listener to ensure the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll(".hover-cursor h4");

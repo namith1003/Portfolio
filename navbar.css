@@ -3,7 +3,6 @@
     display: flex;
     justify-content: space-between;
     padding: 0px 20px;
-    z-index: 9;
 }
 
 #nav h2 {
@@ -16,8 +15,13 @@
 .hover-cursor a {
     color: inherit; /* Inherit text color from parent */
     text-decoration: none; /* Remove underline */
-    cursor: pointer; /* Change cursor to pointer on hover */
     /* Add other styles as needed */
+    cursor: none;
+}
+
+#sections {
+    justify-content: center;
+    align-items: center;
 }
 
 

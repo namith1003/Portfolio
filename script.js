@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 duration: 0.3,
                 x: (dets.x - section.offsetLeft - (section.offsetWidth / 2)) * followStrengthx,
                 y: (dets.y - section.offsetTop - (section.offsetHeight / 2)) * followStrengthy,
-                ease: "power3.out"
+                ease: "back.out"
             });
         });
 
@@ -63,7 +63,6 @@ let circleTL = gsap.timeline({
     scrollTrigger: {
         trigger: "#page2",
         scroller: "body",
-        markers: true,
         start: "top 85%",
         onEnter: () => {
             circleTL.play();
