@@ -55,15 +55,28 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('#sections h4');
+    // GSAP animation for opacity change on hover
+    const elements = document.querySelectorAll('#sections h4, #nav h2');
 
-    sections.forEach(section => {
-        section.addEventListener('mouseenter', () => {
-            gsap.to(section, { opacity: 1, duration: 0.4 });
+    elements.forEach(element => {
+        element.addEventListener('mouseenter', () => {
+            gsap.to(element, { opacity: 1, duration: 0.3 });
         });
 
-        section.addEventListener('mouseleave', () => {
-            gsap.to(section, { opacity: 0.6, duration: 0.4 });
+        element.addEventListener('mouseleave', () => {
+            gsap.to(element, { opacity: 0.6, duration: 0.3 });
+        });
+    });
+
+    // Parallax effect
+    const parallaxLayers = document.querySelectorAll('.parallax-layer');
+
+    window.addEventListener('scroll', () => {
+        let scrollPosition = window.pageYOffset;
+
+        parallaxLayers.forEach(layer => {
+            let speed = layer.getAttribute('data-speed');
+            gsap.to(layer, { y: scrollPosition * speed * -1, ease: "ease.out", overwrite: true });
         });
     });
 });
