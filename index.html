@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="navbar.css">
     <link rel="stylesheet" href="cursor.css">
+    <link rel="stylesheet" href="autoscroll.css">
 </head>
 <body>
   <div class="circle sticky wave"></div>
@@ -52,19 +53,18 @@
             </div>
         </div>
 
-        <div id="hero">
-
-          
-          
+        <div id="hero">  
           <img src="img/path0.png" class="parallax-layer layer" data-speed="0.1" style="z-index: 2;"/>
           <img src="img/path1.png" class="parallax-layer layer" data-speed="0.2" style="z-index: 3;"/>
+          <div class="scroll-container">
+            <h1 class="autoscroll" style="margin: 0;">NAMITH NIMLAKA</h1>
+          </div>
           <img src="img/path3.png" class="parallax-layer layer" data-speed="0.4" style="z-index: 4;"/>
           <div style="z-index: 5;" class="parallax-layer layerspecial">
             <img src="img/path23.png" class="parallax-layer layerspecial" data-speed="0.6" style="z-index: 5;"/>
-            <div style="background-color: #024a6b; width: 100%; height: 600px; bottom: -550px; position: absolute;" class="parallax-layer" data-speed="0.6" style="z-index: 5;" ></div>
+            <div style="background-color: #024a6b; width: 100%; height: 600px; bottom: -595px; position: absolute; justify-content: center; align-items: center; font-size: x-large;" class="parallax-layer" data-speed="0.6" style="z-index: 5;" >
+            </div>
           </div>
-          
-
          </div>
       
     </div>
@@ -82,5 +82,6 @@
     <script src="script.js"></script>
     <script src="navbar.js"></script>
     <script src="cursor.js"></script>
+    <script src="autoscroll.js"></script>
 </body>
 </html>
