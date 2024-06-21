@@ -67,17 +67,29 @@ document.addEventListener('DOMContentLoaded', function() {
             gsap.to(element, { opacity: 0.6, duration: 0.3 });
         });
     });
+    
+});
 
-    // Parallax effect
-    const parallaxLayers = document.querySelectorAll('.parallax-layer');
+// Register the ScrollTrigger plugin
+gsap.registerPlugin(ScrollTrigger);
 
-    window.addEventListener('scroll', () => {
-        let scrollPosition = window.pageYOffset;
+// Select all parallax layers
+const parallaxLayers = document.querySelectorAll('.parallax-layer');
 
-        parallaxLayers.forEach(layer => {
-            let speed = layer.getAttribute('data-speed');
-            gsap.to(layer, { y: scrollPosition * speed * -1, ease: "ease.out", overwrite: true });
-        });
+// Create a parallax effect for each layer
+parallaxLayers.forEach(layer => {
+    const speed = layer.getAttribute('data-speed');
+
+    gsap.to(layer, {
+        y: () => window.innerHeight * speed * -1, // Calculate the total movement
+        ease: "none",
+        scrollTrigger: {
+            trigger: document.body, // Use the entire body as the trigger
+            start: "top top",
+            end: "bottom bottom",
+            scrub: true, // Smooth scrubbing effect
+            invalidateOnRefresh: true // Recalculate on window resize
+        }
     });
 });
 

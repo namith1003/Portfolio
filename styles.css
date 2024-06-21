@@ -6,7 +6,6 @@ body {
     overflow-x: hidden; /* Keep overflow hidden for body */
     margin: 0;
     padding: 0;
-    cursor: none;
 }
 
 .custom-scrollbar {
@@ -43,7 +42,7 @@ body {
     height: 100vh;
     width: 100%;
     scrollbar-width: none; /* Hide default scrollbar in Firefox */
-    background-color: darkslategray;
+    background-color: #024a6b;
 }
 
 .circle {
@@ -80,8 +79,7 @@ body {
 
 #hero {
     position: absolute;
-    bottom: 0;
-    right: 0;
+    top: 0;
     width: 100vw;
     height: 100vh;
     z-index: -1;
@@ -89,21 +87,18 @@ body {
 
 .parallax-layer {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 100vw;
     height: 100vh;
 }
 
-.overflow-box {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background-color: white;
-    text-align: center;
-}
-
 .layer {
     object-fit:cover;
+}
+
+/* Default styles for .layerspecial */
+.layerspecial {
+    top: 0px;
+    width: 104vw;
+    height: 104vh;
+    object-fit: cover;
 }
