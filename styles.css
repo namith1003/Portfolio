@@ -70,7 +70,7 @@ body {
 }
 
 .wave:hover {
-    background-color: red;
+    box-shadow: 0 0 10px red; /* Add a glow effect */
 }
 
 .sticky {
@@ -105,4 +105,25 @@ body {
     width: 104vw;
     height: 104vh;
     object-fit: cover;
+}
+
+
+.modern-button {
+    font-size: 1.5em; /* Adjust font size as needed */
+    color: white;
+    background-color: transparent;
+    border: 2px solid white; /* White border */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    width: 200px;
+    height: 50px;
+}
+
+.modern-button:hover {
+    background-color: white;
+    color: #282c34; /* Change text color on hover */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a glow effect */
+    cursor: none;
 }
