@@ -16,7 +16,7 @@ const tl = gsap.timeline({
 
 // Add the animation to the timeline
 tl.to(text, {
-  x: -1000,
+  x: -distance,
   duration: 15, // Adjust this value to change the speed
   ease: "linear"
 });

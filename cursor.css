@@ -7,7 +7,8 @@
 }
 
 .cursor-dot,
-.cursor-circle {
+.cursor-circle,
+.cursor-image {
     position: fixed;
     top: 0%;
     left: 0%;
@@ -15,6 +16,12 @@
     user-select: none;
     -webkit-user-select: none; /* For older versions of Safari/Chrome */
     -moz-user-select: none; /* For older versions of Firefox */
+}
+
+.cursor-image {
+    z-index: 3;
+    background-size: cover;
+    background-position: center;
 }
 
 .cursor-dot {
@@ -29,4 +36,8 @@
     height: 25px;
     border: 2px solid #fff;
     border-radius: 50%;
+}
+
+.item {
+    z-index: 2;
 }

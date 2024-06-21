@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const cursorDot = document.querySelector('.cursor-dot');
     const cursorCircle = document.querySelector('.cursor-circle');
+    const cursorImage = document.querySelector('.cursor-image');
 
     // Initial positions
     let mouseX = window.innerWidth / 2;
@@ -32,6 +33,11 @@ document.addEventListener('DOMContentLoaded', () => {
         gsap.set(cursorCircle, {
             x: circleX,
             y: circleY
+        });
+
+        gsap.set(cursorImage, {
+            x: dotX - 150,
+            y: dotY - 150
         });
     });
 });
