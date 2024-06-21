@@ -54,6 +54,21 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('#sections h4');
+
+    sections.forEach(section => {
+        section.addEventListener('mouseenter', () => {
+            gsap.to(section, { opacity: 1, duration: 0.4 });
+        });
+
+        section.addEventListener('mouseleave', () => {
+            gsap.to(section, { opacity: 0.6, duration: 0.4 });
+        });
+    });
+});
+
+
 
 
 
