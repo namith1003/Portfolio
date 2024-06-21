@@ -1,0 +1,43 @@
+#content-page2 {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    overflow-y: auto;
+}
+
+.item {
+    width: 95%;
+    margin-bottom: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-name {
+    font-size: 8vw; /* Adjusted big font size */
+    font-weight: bold;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.item-line {
+    height: 2px; /* Line thickness */
+    background-color: gray; /* Line color */
+    width: 95%;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .item-name {
+        font-size: 2em;
+    }
+}

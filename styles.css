@@ -39,10 +39,14 @@ body {
 }
 
 #page2 {    
-    height: 100vh;
+    height: auto;
     width: 100%;
     scrollbar-width: none; /* Hide default scrollbar in Firefox */
     background-color: #024a6b;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 .circle {
