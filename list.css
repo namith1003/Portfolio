@@ -1,9 +1,10 @@
 #content-page2 {
     width: 100%;
-    text-align: center;
-    justify-content: center;
+    text-align: start;
+    justify-content: start;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    color: gray;
 }
 
 .item-list {
