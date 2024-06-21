@@ -16,7 +16,7 @@
     color: inherit; /* Inherit text color from parent */
     text-decoration: none; /* Remove underline */
     /* Add other styles as needed */
-    cursor: none;
+    cursor: default;
 }
 
 #sections {
@@ -47,7 +47,7 @@
     align-items: center;
     text-decoration: none;
     color: inherit;
-    cursor: none;
+    cursor: default;
 }
 
 .btn-text {

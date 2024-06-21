@@ -5,7 +5,7 @@ body {
     font-family: Arial, sans-serif;
     overflow-x: hidden; /* Keep overflow hidden for body */
     margin: 0;
-    padding: 0;
+    padding: 0; 
 }
 
 .custom-scrollbar {
@@ -114,7 +114,7 @@ body {
     border: 2px solid white; /* White border */
     border-radius: 25px; /* Rounded corners */
     padding: 10px 20px;
-    cursor: pointer;
+    cursor: default;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     width: 200px;
     height: 50px;
@@ -124,5 +124,5 @@ body {
     background-color: white;
     color: #282c34; /* Change text color on hover */
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a glow effect */
-    cursor: none;
+    cursor: default;
 }

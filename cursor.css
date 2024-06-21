@@ -40,4 +40,5 @@
 
 .item {
     z-index: 2;
+    cursor: default;
 }
