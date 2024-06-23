@@ -31,6 +31,33 @@ body {
     cursor: grab;
 }
 
+/* Hide scrollbar by default */
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+/* Make scrollbar visible when in use */
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #024a6b; /* Transparent track */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.6); /* Black with 0.6 opacity */
+    border-radius: 10px; /* Rounded corners */
+    visibility: visible;
+}
+
+/* Make scrollbar hidden again when not in use */
+body::-webkit-scrollbar-thumb:window-inactive {
+    background-color: transparent; /* Fully transparent */
+}
+
+
 #page1 {    
     height: 100vh;
     width: 100%;
