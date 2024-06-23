@@ -35,14 +35,21 @@ items.forEach(item => {
       width: 300,
       height: 300,
       opacity: 1,
-      duration: 0,
-      delay: 0.2,
+      duration: 0.3,
     });
+
+    gsap.to(cursorImage, {
+        scale: 1,
+        duration: 0.2,
+        delay: 0.1,
+      });
     
     cursorImage.style.backgroundImage = `url(${imageUrl})`;
   });
 
   item.addEventListener('mouseleave', () => {
+
+    cursorImage.style.backgroundImage = `none`;
     gsap.to(cursor, {
       width: 20,
       height: 20,
@@ -68,6 +75,9 @@ items.forEach(item => {
       height: 0,
       opacity: 0,
       duration: 0,
+      scale: 0,
     });
+
+    
   });
 });

@@ -27,12 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         gsap.set(cursorDot, {
             x: dotX,
-            y: dotY
+            y: dotY,
         });
 
         gsap.set(cursorCircle, {
             x: circleX,
-            y: circleY
+            y: circleY,
         });
 
         gsap.set(cursorImage, {

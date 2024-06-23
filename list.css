@@ -21,6 +21,7 @@
     margin-bottom: 20px;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 }
 
 .item-name {
@@ -34,6 +35,7 @@
     height: 2px; /* Line thickness */
     background-color: gray; /* Line color */
     width: 95%;
+    z-index: 1;
 }
 
 /* Responsive design */

@@ -3,7 +3,6 @@ body {
     background-color: #111;
     color: #fff; 
     font-family: Arial, sans-serif;
-    overflow-x: hidden; /* Keep overflow hidden for body */
     margin: 0;
     padding: 0; 
 }
@@ -101,7 +100,7 @@ body {
 /* Default styles for .layerspecial */
 .layerspecial {
     top: 0px;
-    width: 104vw;
+    width: 100vw;
     height: 104vh;
     object-fit: cover;
 }
@@ -112,17 +111,17 @@ body {
     color: white;
     background-color: transparent;
     border: 2px solid white; /* White border */
-    border-radius: 25px; /* Rounded corners */
-    padding: 10px 20px;
+    border-radius: 40px; /* Rounded corners */
     cursor: default;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     width: 200px;
-    height: 50px;
+    height: 80px;
+    padding: 0;
+    z-index: 5;
 }
 
 .modern-button:hover {
     background-color: white;
     color: #282c34; /* Change text color on hover */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* Add a glow effect */
     cursor: default;
 }

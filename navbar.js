@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     gsap.from('#nav #sections #section', {
         duration: 1,
-        x: 100, // Start off-screen to the right
+        x: 20,// Start off-screen to the right
         opacity: 0,
         ease: 'power3.out',
         stagger: 0.1, // Staggered animation

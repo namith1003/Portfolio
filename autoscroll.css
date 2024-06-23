@@ -1,20 +1,17 @@
 .scroll-container {
-    position: absolute;
-    top: 45%;
-    left: 0;
-    width: 100%;
-    z-index: 5;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-  }
-  
-  .autoscroll {
-    font-size: 11vw;
-    color: white;
-    margin: 0;
-    padding: 0;
-    z-index: 5;
-    justify-content: center;
-    align-items: center;
-  }
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100vw;
+  z-index: 5;
+  overflow: hidden; /* Add this line */
+}
+
+.autoscroll {
+  font-size: 11vw;
+  color: white;
+  margin: 0;
+  padding: 0;
+  z-index: 5;
+  white-space: nowrap; /* Add this line */
+}
