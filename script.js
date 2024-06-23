@@ -11,8 +11,8 @@ document.addEventListener("DOMContentLoaded", function() {
             // GSAP animation to follow mouse within section bounds
             gsap.to(section, {
                 duration: 0.3,
-                x: (dets.x - section.offsetLeft - (section.offsetWidth / 2)) * followStrengthx,
-                y: (dets.y - section.offsetTop - (section.offsetHeight / 2)) * followStrengthy,
+                x: (dets.x - section.offsetLeft) * followStrengthx,
+                y: (dets.y - section.offsetTop) * followStrengthy,
                 ease: "ease.out"
             });
         });

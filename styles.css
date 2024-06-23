@@ -47,7 +47,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.6); /* Black with 0.6 opacity */
+    background-color: #9BE4F6; /* Black with 0.6 opacity */
     border-radius: 10px; /* Rounded corners */
     visibility: visible;
 }
@@ -105,6 +105,23 @@ body::-webkit-scrollbar-thumb:window-inactive {
     -moz-user-select: none; /* For older versions of Firefox */
     z-index: 10;
     padding: 5px;
+}
+
+#image-container{
+    position: absolute;
+    top: 32%;
+    left: 15%;
+    width: 18.1vmax;
+    height: 18.1vmax;
+    background-color: #9BE4F6;
+    border-radius: 300px;
+    transform: translate(-50%, -50%);
+}
+
+#my-image {
+    width: 18vmax;
+    height: 18vmax;
+    border-radius: 300px;
 }
 
 #hero {
