@@ -63,7 +63,7 @@ let circleTL = gsap.timeline({
     scrollTrigger: {
         trigger: "#page2",
         scroller: "body",
-        start: "top 85%",
+        start: "top 70%",
         onEnter: () => {
             circleTL.play();
         },
