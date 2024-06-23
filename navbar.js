@@ -43,9 +43,12 @@ document.addEventListener("DOMContentLoaded", function() {
 document.addEventListener("DOMContentLoaded", function() {
     const btnClick = document.querySelector('.name-bar');
     const cbd = document.querySelector('.cbn');
+    const cb = document.querySelector('.code-by');
+
+    cbWidth = cb.offsetWidth;
 
     btnClick.addEventListener('mouseenter', () => {
-        gsap.to(cbd, { x: -128, duration: 1, ease: "power1.inOut" }); // Adjust to ensure it stops before the copyright symbol
+        gsap.to(cbd, { x: -cbWidth, duration: 1, ease: "power1.inOut" }); // Adjust to ensure it stops before the copyright symbol
     });
 
     btnClick.addEventListener('mouseleave', () => {
@@ -64,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         element.addEventListener('mouseleave', () => {
-            gsap.to(element, { opacity: 0.6, duration: 0.3 });
+            gsap.to(element, { opacity: 0.8, duration: 0.3 });
         });
     });
     

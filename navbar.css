@@ -25,7 +25,7 @@
 }
 
 #sections h4 {
-    opacity: 0.6;
+    opacity: 0.8;
     font-size: 24px;
 }
 
@@ -54,6 +54,7 @@
     display: flex;
     align-items: center;
     transition: transform 0.5s ease-out;
+    font-size: 1em;
 }
 
 .credit, .cbn {

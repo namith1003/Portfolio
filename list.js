@@ -4,12 +4,12 @@ const cursor = document.querySelector('.cursor');
 const cursorDot = document.querySelector('.cursor-dot');
 const cursorCircle = document.querySelector('.cursor-circle');
 const cursorImage = document.querySelector('.cursor-image');
-const items = document.querySelectorAll('.item');
+const projects = document.querySelectorAll('.project');
 
-// Item hover effect
-items.forEach(item => {
-  item.addEventListener('mouseenter', () => {
-    const imageUrl = item.getAttribute('data-image');
+// project hover effect
+projects.forEach(project => {
+  project.addEventListener('mouseenter', () => {
+    const imageUrl = project.getAttribute('data-image');
     
     gsap.to(cursor, {
       width: 100,
@@ -47,7 +47,7 @@ items.forEach(item => {
     cursorImage.style.backgroundImage = `url(${imageUrl})`;
   });
 
-  item.addEventListener('mouseleave', () => {
+  project.addEventListener('mouseleave', () => {
 
     cursorImage.style.backgroundImage = `none`;
     gsap.to(cursor, {

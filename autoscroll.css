@@ -1,18 +1,28 @@
-.scroll-container {
-  position: absolute;
-  top: 45%;
-  left: 0;
-  width: 100vw;
-  z-index: 5;
+.big-name {
   overflow: hidden;
+  width: 100%;
+  white-space: nowrap;
+  position: absolute;
+  z-index: 5;
+  bottom: 12%
 }
 
-.autoscroll {
-  font-size: 11vw;
-  color: white;
-  margin: 0;
-  padding: 0;
-  z-index: 5;
-  white-space: nowrap;
+.name-wrap {
   display: inline-block;
+}
+
+.no-select {
+  user-select: none;
+  font-size: 11vmax;
+  font-weight: bold;
+  z-index: 5;
+}
+
+.spacer {
+  margin-left: 1rem;
+}
+
+.no-select::before {
+  content: " "; 
+  white-space: pre; 
 }

@@ -33,13 +33,13 @@ body {
 #page1 {    
     height: 100vh;
     width: 100%;
-    scrollbar-width: none; /* Hide default scrollbar in Firefox */
+    scrollbar-width: none;
 }
 
 #page2 {    
     height: auto;
     width: 100%;
-    scrollbar-width: none; /* Hide default scrollbar in Firefox */
+    scrollbar-width: none; 
     background-color: #024a6b;
     display: flex;
     flex-direction: column;
@@ -82,14 +82,14 @@ body {
 #hero {
     position: absolute;
     top: 0;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     z-index: -1;
 }
 
 .parallax-layer {
     position: absolute;
-    width: 100vw;
+    width: 100%;
     height: 100vh;
 }
 
@@ -99,8 +99,7 @@ body {
 
 /* Default styles for .layerspecial */
 .layerspecial {
-    top: 0px;
-    width: 100vw;
+    bottom: -70px;
     height: 104vh;
     object-fit: cover;
 }
@@ -125,3 +124,7 @@ body {
     color: #282c34; /* Change text color on hover */
     cursor: default;
 }
+
+
+
+
