@@ -1,25 +1,23 @@
 gsap.registerPlugin(ScrollTrigger);
 
 const text = document.querySelector('.autoscroll');
-const textWidth = text.offsetWidth;
-const windowWidth = window.innerWidth;
+const container = document.querySelector('.scroll-container');
 
-// Calculate the distance to move
-const distance = textWidth - windowWidth;
+let lastScrollTop = 0;
+let direction = 1;
+let position = -51.5; // first move to the end position
 
-// Create the timeline
-const tl = gsap.timeline({
-  repeat: -1, // Repeat indefinitely
-  yoyo: true, // Reverse the animation
-  ease: "linear"
+const startPos = 0.82; // position to go to when scrolling up
+const endPos = -51.5; // position to go to when scrolling down
+
+gsap.to (text,{
+  transform: `translateX(${position}%)`,
+  duration: 10,
+  scrollTrigger: {
+    trigger: "#page1",
+    scroller: "body",
+    start: "top 0%",
+    end: "bottom 90%",
+    scrub: 5,
+  }
 });
-
-// Add the animation to the timeline
-tl.to(text, {
-  x: -distance,
-  duration: 15, // Adjust this value to change the speed
-  ease: "linear"
-});
-
-// Play the timeline
-tl.play();
