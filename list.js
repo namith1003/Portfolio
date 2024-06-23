@@ -42,6 +42,7 @@ projects.forEach(project => {
         scale: 1,
         duration: 0.2,
         delay: 0.1,
+        zIndex: 1000
       });
     
     cursorImage.style.backgroundImage = `url(${imageUrl})`;

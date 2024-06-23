@@ -6,6 +6,13 @@
     color: gray;
 }
 
+#content-page2 h1{
+    font-size: large; 
+    font-style: bold;
+}
+
+
+
 .project-list {
     display: flex;
     flex-direction: column;
@@ -21,6 +28,7 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
+    
 }
 
 .project-name {
@@ -28,6 +36,7 @@
     font-weight: bold;
     color: white;
     margin-bottom: 5px;
+    
 }
 
 .project-line {
