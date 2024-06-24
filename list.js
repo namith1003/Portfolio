@@ -82,3 +82,25 @@ projects.forEach(project => {
     
   });
 });
+
+
+
+  const projectnames = document.querySelectorAll(".project-name");
+
+  // Add event listeners to each section
+  projectnames.forEach(project => {
+          // GSAP animation to follow mouse within section bounds
+          gsap.from(project, {
+            duration: 1,
+            x: 50,// Start off-screen to the right
+            opacity: 0,
+            ease: 'power3.out',
+            scrollTrigger: {
+              scroller: "body",
+              trigger: project,
+              markers: true,
+              start: "bottom 95%",
+              end: "bottom 60%"
+            }
+        });
+  });
