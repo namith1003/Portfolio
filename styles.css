@@ -6,6 +6,7 @@ body {
     margin: 0;
     padding: 0; 
     scroll-behavior:smooth;
+    cursor: none;
 }
 
 .custom-scrollbar {
@@ -169,10 +170,6 @@ body::-webkit-scrollbar-thumb:window-inactive {
     color: #282c34; /* Change text color on hover */
     cursor: default;
 }
-
-
-
-
 
 
 

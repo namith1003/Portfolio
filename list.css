@@ -4,6 +4,7 @@
     justify-content: start;
     align-items: center;
     color: gray;
+    z-index: 0;
 }
 
 #content-page2 h1{
@@ -20,6 +21,7 @@
     align-items: center;
     width: 95%;
     overflow: hidden;
+    z-index: 1;
 }
 
 .project {
@@ -27,7 +29,6 @@
     margin-bottom: 20px;
     justify-content: center;
     align-items: center;
-    z-index: 1;
     
 }
 
@@ -43,7 +44,6 @@
     height: 2px; /* Line thickness */
     background-color: gray; /* Line color */
     width: 100%;
-    z-index: 1;
 }
 
 /* Responsive design */
