@@ -112,8 +112,8 @@ body::-webkit-scrollbar-thumb:window-inactive {
     position: absolute;
     top: 32%;
     left: 15%;
-    width: 18.1vmax;
-    height: 18.1vmax;
+    width: 18.2vmax;
+    height: 18.2vmax;
     background-color: #9BE4F6;
     border-radius: 300px;
     transform: translate(-50%, -50%);
