@@ -9,8 +9,49 @@ document.addEventListener("DOMContentLoaded", function() {
         const followStrengthx = section.getAttribute('xspeed');
         const followStrengthy = section.getAttribute('yspeed');
         section.addEventListener("mousemove", function(dets){
-            console.log(section.offsetLeft);
-            console.log(section.offsetTop);
+            console.log(section.offsetLeft, "section offset left");
+            console.log(section.offsetTop, "section offset top");
+            console.log(dets.x, "details x");
+            console.log(dets.y, "details y");
+            console.log(section.offsetWidth, "details offset left");
+            console.log(section.offsetHeight, "details offset top");
+            // GSAP animation to follow mouse within section bounds
+            gsap.to(section, {
+                duration: 0.3,
+                x: (dets.x - section.offsetLeft - section.offsetWidth/2) * followStrengthx,
+                y: (dets.y - section.offsetTop - section.offsetHeight/2) * followStrengthy,
+                ease: "ease.out"
+            });
+        });
+
+        section.addEventListener("mouseleave", () => {
+            // Return section to original position on mouseleave
+            gsap.to(section, {
+                duration: 0.4,
+                x: 0,
+                y: 0,
+                ease: "bounce.out"
+            });
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll(".sticky-image");
+
+    
+
+    // Add event listeners to each section
+    sections.forEach(section => {
+        const followStrengthx = section.getAttribute('xspeed');
+        const followStrengthy = section.getAttribute('yspeed');
+        section.addEventListener("mousemove", function(dets){
+            console.log(section.offsetLeft, "section offset left");
+            console.log(section.offsetTop, "section offset top");
+            console.log(dets.x, "details x");
+            console.log(dets.y, "details y");
+            console.log(section.offsetWidth, "details offset left");
+            console.log(section.offsetHeight, "details offset top");
             // GSAP animation to follow mouse within section bounds
             gsap.to(section, {
                 duration: 0.3,
