@@ -2,12 +2,15 @@
 document.addEventListener("DOMContentLoaded", function() {
     const sections = document.querySelectorAll(".sticky");
 
-    const followStrengthx = 0.3; // Adjust follow strength (higher value = more movement)
-    const followStrengthy = 0.6; // Adjust follow strength (higher value = more movement)
+    
 
     // Add event listeners to each section
     sections.forEach(section => {
+        const followStrengthx = section.getAttribute('xspeed');
+        const followStrengthy = section.getAttribute('yspeed');
         section.addEventListener("mousemove", function(dets){
+            console.log(section.offsetLeft);
+            console.log(section.offsetTop);
             // GSAP animation to follow mouse within section bounds
             gsap.to(section, {
                 duration: 0.3,
@@ -28,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
+
 
 document.addEventListener("DOMContentLoaded", function() {
     const waveElements = document.querySelectorAll(".wave");
