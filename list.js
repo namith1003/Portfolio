@@ -100,7 +100,8 @@ projects.forEach(project => {
               trigger: project,
               markers: true,
               start: "bottom 95%",
-              end: "bottom 60%"
+              end: "bottom 60%",
+              toggleActions: "play none none reverse",
             }
         });
   });
