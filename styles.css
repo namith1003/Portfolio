@@ -40,7 +40,7 @@ body {
 
 /* Make scrollbar visible when in use */
 ::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
+    width: 8px; /* Width of the scrollbar */
 }
 
 ::-webkit-scrollbar-track {
@@ -152,17 +152,17 @@ body::-webkit-scrollbar-thumb:window-inactive {
 
 
 .modern-button {
-    font-size: 1.5em; /* Adjust font size as needed */
+    font-size: 1.5vmax; /* Adjust font size as needed */
     color: white;
     background-color: transparent;
     border: 2px solid white; /* White border */
     border-radius: 40px; /* Rounded corners */
     cursor: default;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
-    width: 200px;
-    height: 80px;
-    padding: 0;
-    z-index: 5;
+    margin: 4vmax;
+    margin-bottom: 6vmax;
+    padding: 1vmax 1.5vmax; /* Responsive padding based on font size */
+    
 }
 
 .modern-button:hover {
@@ -170,6 +170,4 @@ body::-webkit-scrollbar-thumb:window-inactive {
     color: #282c34; /* Change text color on hover */
     cursor: default;
 }
-
-
 

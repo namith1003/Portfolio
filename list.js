@@ -20,14 +20,14 @@ projects.forEach(project => {
     gsap.to(cursorCircle, {
       width: 320,
       height: 320,
-      borderRadius: 0,
+      borderRadius: 80,
       duration: 0.3
     });
     
     gsap.to(cursorDot, {
       width: 310,
       height: 310,
-      borderRadius: 0,
+      borderRadius: 80,
       duration: 0.3
     });
     
@@ -36,6 +36,7 @@ projects.forEach(project => {
       height: 300,
       opacity: 1,
       duration: 0.3,
+      borderRadius: 800,
     });
 
     gsap.to(cursorImage, {
@@ -91,15 +92,15 @@ projects.forEach(project => {
   projectnames.forEach(project => {
           // GSAP animation to follow mouse within section bounds
           gsap.from(project, {
-            duration: 1,
+            duration: 0.5,
             x: 50,// Start off-screen to the right
             opacity: 0,
             ease: 'power3.out',
             scrollTrigger: {
               scroller: "body",
               trigger: project,
-              start: "bottom 95%",
-              end: "bottom 60%",
+              start: "bottom 100%",
+              end: "bottom 80%",
               toggleActions: "play none none reverse",
             }
         });
