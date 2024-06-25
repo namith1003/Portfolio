@@ -9,29 +9,6 @@ body {
     cursor: none;
 }
 
-.custom-scrollbar {
-    position: fixed;
-    right: 0;
-    top: 0;
-    width: 1px;
-    height: 100%;
-    transform-origin: center right;
-    transition: transform 0.3s, opacity 0.3s;
-    opacity: 1; /* Show the scrollbar */
-}
-
-.custom-scrollbar_thumb {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-color: black;
-    opacity: 0.5;
-    width: 1px;
-    margin: 2px;
-    cursor: -webkit-grab;
-    cursor: grab;
-}
-
 /* Hide scrollbar by default */
 ::-webkit-scrollbar {
     width: 0;
@@ -40,18 +17,9 @@ body {
 
 /* Make scrollbar visible when in use */
 ::-webkit-scrollbar {
-    width: 8px; /* Width of the scrollbar */
+    visibility: hidden;
 }
 
-::-webkit-scrollbar-track {
-    background: #024a6b; /* Transparent track */
-}
-
-::-webkit-scrollbar-thumb {
-    background-color: #9BE4F6; /* Black with 0.6 opacity */
-    border-radius: 10px; /* Rounded corners */
-    visibility: visible;
-}
 
 /* Make scrollbar hidden again when not in use */
 body::-webkit-scrollbar-thumb:window-inactive {
@@ -139,6 +107,12 @@ body::-webkit-scrollbar-thumb:window-inactive {
     height: 100vh;
 }
 
+.parallax-floor {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+}
+
 .layer {
     object-fit:cover;
 }
@@ -160,7 +134,7 @@ body::-webkit-scrollbar-thumb:window-inactive {
     cursor: default;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     margin: 4vmax;
-    margin-bottom: 6vmax;
+    margin-bottom: 5vmax;
     padding: 1vmax 1.5vmax; /* Responsive padding based on font size */
     
 }
@@ -169,5 +143,20 @@ body::-webkit-scrollbar-thumb:window-inactive {
     background-color: white;
     color: #282c34; /* Change text color on hover */
     cursor: default;
+}
+
+footer {
+    position: relative; /* Ensure relative positioning for absolute child */
+    width: 100%; /* Make footer span full width */
+}
+
+.footer-image {
+    width: 100%; /* Ensure image spans full width of footer */
+    display: block; /* Ensure the image is displayed as a block */
+}
+
+.footer-content {
+    background-color: #0484AB; /* Example background color */
+    width: 100%; /* Ensure div spans full width of footer */
 }
 
