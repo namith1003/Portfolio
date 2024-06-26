@@ -15,14 +15,14 @@ projects.forEach(project => {
     gsap.to(cursorCircle, {
       width: '17vmax',
       height: '17vmax',
-      borderRadius: 80,
+      borderRadius: 0,
       duration: 0.3
     });
     
     gsap.to(cursorDot, {
       width: '16vmax',
       height: '16vmax',
-      borderRadius: 80,
+      borderRadius: 0,
       duration: 0.3
     });
     
@@ -31,7 +31,7 @@ projects.forEach(project => {
       height: '15.5vmax',
       opacity: 1,
       duration: 0.3,
-      borderRadius: 800,
+      borderRadius: 0,
     });
 
     gsap.to(cursorImage, {
