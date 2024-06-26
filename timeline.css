@@ -88,19 +88,15 @@
   
     .timeline-item {
       width: 90%;
+      margin-left: 10%;
     }
   
     .timeline-dot {
-      left: 5%;
+      left: -5.5%;
     }
   
     .timeline-content {
       width: 100%;
       left: 0 !important;
-    }
-  
-    .timeline-item.left .timeline-content,
-    .timeline-item.right .timeline-content {
-      transform: translateX(10%);
     }
   }
