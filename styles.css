@@ -131,7 +131,7 @@ body::-webkit-scrollbar-thumb:window-inactive {
     background-color: transparent;
     border: 2px solid white; /* White border */
     border-radius: 40px; /* Rounded corners */
-    cursor: default;
+    cursor: none;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     margin: 4vmax;
     margin-bottom: 5vmax;
@@ -142,7 +142,7 @@ body::-webkit-scrollbar-thumb:window-inactive {
 .modern-button:hover {
     background-color: white;
     color: #282c34; /* Change text color on hover */
-    cursor: default;
+    cursor: none;
 }
 
 footer {
@@ -203,6 +203,10 @@ footer {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     opacity: 0;
     transition: all 0.5s ease;
+  }
+
+  .timeline-content p{
+    color: #2c3e50;
   }
   
   .timeline-item.right .timeline-content {

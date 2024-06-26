@@ -9,12 +9,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const followStrengthx = section.getAttribute('xspeed');
         const followStrengthy = section.getAttribute('yspeed');
         section.addEventListener("mousemove", function(dets){
-            console.log(section.offsetLeft, "section offset left");
-            console.log(section.offsetTop, "section offset top");
-            console.log(dets.x, "details x");
-            console.log(dets.y, "details y");
-            console.log(section.offsetWidth, "details offset left");
-            console.log(section.offsetHeight, "details offset top");
             // GSAP animation to follow mouse within section bounds
             gsap.to(section, {
                 duration: 0.3,
@@ -134,4 +128,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
 
-  
+
