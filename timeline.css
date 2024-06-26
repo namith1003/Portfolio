@@ -1,0 +1,106 @@
+.timeline-container {
+    position: relative;
+    width: 95%;
+    margin: 0 0;
+    padding: 3% 0;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    width: 0.25%;
+    min-width: 2px;
+    background-color: #3498db;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 5%;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    width: 1.5%;
+    min-width: 12px;
+    aspect-ratio: 1 / 1;
+    background-color: #3498db;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 2.5%;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .timeline-item.right .timeline-content {
+    left: 55%;
+  }
+  
+  .timeline-item.left .timeline-content {
+    left: 0;
+  }
+  .timeline-content.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .timeline-content h3 {
+    margin-top: 0;
+    color: #3498db;
+    font-size: 1.2em;
+  }
+  
+  .timeline-content h4 {
+    margin-top: 2%;
+    color: #2c3e50;
+    font-size: 1em;
+  }
+  
+  .timeline-content p {
+    font-size: 0.9em;
+  }
+  
+  /* Varying heights for timeline items */
+  .timeline-item:nth-child(3n) .timeline-content { min-height: 15vh; }
+  .timeline-item:nth-child(3n+1) .timeline-content { min-height: 18vh; }
+  .timeline-item:nth-child(3n+2) .timeline-content { min-height: 20vh; }
+  
+  @media screen and (max-width: 768px) {
+    .timeline-line {
+      left: 5%;
+    }
+  
+    .timeline-item {
+      width: 90%;
+    }
+  
+    .timeline-dot {
+      left: 5%;
+    }
+  
+    .timeline-content {
+      width: 100%;
+      left: 0 !important;
+    }
+  
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content {
+      transform: translateX(10%);
+    }
+  }
