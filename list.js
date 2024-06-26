@@ -10,30 +10,25 @@ const projects = document.querySelectorAll('.project');
 projects.forEach(project => {
   project.addEventListener('mouseenter', () => {
     const imageUrl = project.getAttribute('data-image');
-    
-    gsap.to(cursor, {
-      width: 100,
-      height: 100,
-      duration: 0.3
-    });
+  
 
     gsap.to(cursorCircle, {
-      width: 320,
-      height: 320,
+      width: '17vmax',
+      height: '17vmax',
       borderRadius: 80,
       duration: 0.3
     });
     
     gsap.to(cursorDot, {
-      width: 310,
-      height: 310,
+      width: '16vmax',
+      height: '16vmax',
       borderRadius: 80,
       duration: 0.3
     });
     
     gsap.to(cursorImage, {
-      width: 300,
-      height: 300,
+      width: '15.5vmax',
+      height: '15.5vmax',
       opacity: 1,
       duration: 0.3,
       borderRadius: 800,
@@ -52,11 +47,6 @@ projects.forEach(project => {
   project.addEventListener('mouseleave', () => {
 
     cursorImage.style.backgroundImage = `none`;
-    gsap.to(cursor, {
-      width: 20,
-      height: 20,
-      duration: 0.3
-    });
 
     gsap.to(cursorCircle, {
       width: 25,

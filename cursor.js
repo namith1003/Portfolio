@@ -35,9 +35,11 @@ document.addEventListener('DOMContentLoaded', () => {
             y: circleY,
         });
 
+        const halfSize = 15.5 * (Math.max(window.innerWidth, window.innerHeight) / 100) / 2;
+
         gsap.set(cursorImage, {
-            x: dotX - 150,
-            y: dotY - 150
+        x: dotX - halfSize,
+        y: dotY - halfSize
         });
     });
 });
