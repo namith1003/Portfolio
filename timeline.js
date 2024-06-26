@@ -28,7 +28,8 @@ document.addEventListener('DOMContentLoaded', () => {
   
         gsap.set(content, { 
           opacity: 0,
-          x: isMobile ? 20 : 50 * direction // Smaller offset for mobile
+          x: isMobile ? 20 : 50 * direction,
+
         });
   
         ScrollTrigger.create({
@@ -38,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
           toggleActions: "play reverse play reverse",
           animation: gsap.to(content, {
             opacity: 1,
-            x: 0,
+            x:0,
             duration: 0.5,
             ease: "power2.out"
           })
