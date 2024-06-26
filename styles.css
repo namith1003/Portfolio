@@ -160,3 +160,104 @@ footer {
     width: 100%; /* Ensure div spans full width of footer */
 }
 
+
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  
+  .timeline-line {
+    position: absolute;
+    width: 4px;
+    background-color: #3498db;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -2px;
+  }
+  
+  .timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+  }
+  
+  .timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background-color: #3498db;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .timeline-content {
+    position: relative;
+    width: 45%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: all 0.5s ease;
+  }
+  
+  .timeline-item.right .timeline-content {
+    left: 55%;
+    transform: translateX(50px);
+  }
+  
+  .timeline-item.left .timeline-content {
+    left: 0;
+    transform: translateX(-50px);
+  }
+  
+  .timeline-content.show {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .timeline-content h3 {
+    margin-top: 0;
+    color: #3498db;
+  }
+  
+  .timeline-content h4 {
+    margin-top: 5px;
+    color: #2c3e50;
+  }
+  
+  /* Varying heights for timeline items */
+  .timeline-item:nth-child(3n) .timeline-content { min-height: 150px; }
+  .timeline-item:nth-child(3n+1) .timeline-content { min-height: 180px; }
+  .timeline-item:nth-child(3n+2) .timeline-content { min-height: 200px; }
+  
+  /* Responsive design for mobile */
+  @media screen and (max-width: 768px) {
+    .timeline-line {
+      left: 30px;
+    }
+  
+    .timeline-item {
+      width: 100%;
+      margin-left: 30px;
+    }
+  
+    .timeline-dot {
+      left: 30px;
+    }
+  
+    .timeline-content {
+      width: calc(100% - 60px);
+      left: 30px !important;
+    }
+  
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content {
+      transform: translateX(50px);
+    }
+  }
+
