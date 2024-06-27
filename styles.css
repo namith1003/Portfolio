@@ -30,15 +30,17 @@ body::-webkit-scrollbar-thumb:window-inactive {
 }
 
 #page2 {    
-    height: auto;
-    width: 100%;
-    scrollbar-width: none; 
-    background-color: #024a6b;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
+  height: auto;
+  width: 100%;
+  scrollbar-width: none; 
+  background: linear-gradient(to bottom, #024a6b, #001a33 60%); /* 20% indicates the point at which the transition to dark blue begins */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
+
+
 
 .circle {
     position: fixed;
