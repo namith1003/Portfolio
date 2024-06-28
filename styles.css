@@ -142,6 +142,25 @@ body::-webkit-scrollbar-thumb:window-inactive {
     cursor: none;
 }
 
+.contact-button {
+  font-size: 1vmax; /* Adjust font size as needed */
+  color: white;
+  background-color: transparent;
+  border: 2px solid white; /* White border */
+  border-radius: 40px; /* Rounded corners */
+  cursor: none;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+  margin-top: 2vmax;
+  padding: 1vmax 1.5vmax; /* Responsive padding based on font size */
+  
+}
+
+.contact-button:hover {
+  background-color: white;
+  color: #282c34; /* Change text color on hover */
+  cursor: none;
+}
+
 footer {
     position: relative; /* Ensure relative positioning for absolute child */
     width: 100%; /* Make footer span full width */
@@ -153,17 +172,70 @@ footer {
 }
 
 .footer-content {
-    background-color: #0484AB; /* Example background color */
+    background-color: #0479ab; /* Example background color */
     width: 100%; /* Ensure div spans full width of footer */
 }
 
 
 
+.split-container {
+  display: flex;
+  height: 60vh;
+  position: relative;
+  width: 100%;
+}
+
+.split-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background-color: #fff;
+  margin-top: 2vh;
+}
+
+.left-half, .right-half {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+  transform: translateY(-3px);
+}
+
+.social-link i {
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.github i { color: #24292e; }
+.linkedin i { color: #0077b5; }
+.website i { color: #2ecc71; }
+.twitter i { color: #1da1f2; }
 
 .contact-form-container {
   background: transparent;
   padding: 2rem;
-  border-radius: 10px;
   width: 100%;
   max-width: 500px;
   overflow: hidden;
