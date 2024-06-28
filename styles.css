@@ -184,6 +184,38 @@ footer {
 
 
 
+.chain-line {
+  position: relative;
+  height: 40px; /* Adjust based on your chain/wheel size */
+  width: 100%;
+  overflow: hidden;
+}
+
+.chain-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 200%; /* Make it twice the width to allow for seamless looping */
+}
+
+.chain {
+  height: 20px; /* Adjust based on your image */
+  width: 100%;
+  object-fit: repeat-x;
+}
+
+.pirate-wheel {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  height: 40px; /* Adjust based on your image */
+  width: 40px; /* Adjust based on your image */
+}
+
+
+
 
 
 

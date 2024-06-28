@@ -1,4 +1,4 @@
-#content-page2 {
+.content-page2 {
     width: 95%;
     text-align: start;
     justify-content: start;
@@ -7,7 +7,7 @@
     z-index: 0;
 }
 
-#content-page2 h1{
+.content-page2 h1{
     font-size: large; 
     font-style: bold;
 }
