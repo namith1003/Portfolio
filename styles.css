@@ -99,6 +99,12 @@ body::-webkit-scrollbar-thumb:window-inactive {
     z-index: -1;
 }
 
+.project-line {
+  height: 2px; /* Line thickness */
+  background-color: gray; /* Line color */
+  width: 100%;
+}
+
 .parallax-layer {
     position: absolute;
     width: 100%;
@@ -178,91 +184,7 @@ footer {
 
 
 
-.split-container {
-  display: flex;
-  height: 60vh;
-  position: relative;
-  width: 100%;
-}
 
-.split-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 1px;
-  height: 100%;
-  background-color: #fff;
-  margin-top: 2vh;
-}
-
-.left-half, .right-half {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: transparent;
-}
-
-.social-links {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  transition: transform 0.3s ease;
-}
-
-.social-link:hover {
-  transform: translateY(-3px);
-}
-
-.social-link i {
-  font-size: 24px;
-  margin-right: 10px;
-}
-
-.github i { color: #24292e; }
-.linkedin i { color: #0077b5; }
-.website i { color: #2ecc71; }
-.twitter i { color: #1da1f2; }
-
-.contact-form-container {
-  background: transparent;
-  padding: 2rem;
-  width: 100%;
-  max-width: 500px;
-  overflow: hidden;
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  color: #fff;
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-sizing: border-box;
-}
-
-.form-group textarea {
-  resize: vertical;
-}
 
 
 

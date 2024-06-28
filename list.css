@@ -3,7 +3,7 @@
     text-align: start;
     justify-content: start;
     align-items: center;
-    color: gray;
+    color: lightgrey;
     z-index: 0;
 }
 
@@ -38,12 +38,6 @@
     color: white;
     margin-bottom: 5px;
     
-}
-
-.project-line {
-    height: 2px; /* Line thickness */
-    background-color: gray; /* Line color */
-    width: 100%;
 }
 
 /* Responsive design */
